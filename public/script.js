@@ -131,18 +131,21 @@ async function main()
     })
 
   prev.addEventListener("click", () => {
-    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
-    if ((index - 1) >= 0) {
+    let currentFile = decodeURIComponent(currentSong.src.split("/").pop());
+    let index = songs.indexOf(currentFile);
+    if (index > 0) {
         playMusic(songs[index - 1]);
     }
-});
+  });
 
-next.addEventListener("click", () => {
-    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
-    if ((index + 1) < songs.length) {
+  next.addEventListener("click", () => {
+    let currentFile = decodeURIComponent(currentSong.src.split("/").pop());
+    let index = songs.indexOf(currentFile);
+    if (index < songs.length - 1) {
         playMusic(songs[index + 1]);
     }
-});
+  });
+  
 
 document.querySelector(".range").addEventListener("change",(e)=>{
     
