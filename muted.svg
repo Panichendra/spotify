@@ -1,0 +1,8 @@
+<svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Speaker base -->
+  <path d="M4 8v8h4l5 5V3l-5 5H4z" fill="white"/>
+
+  <!-- Cross (mute) now slightly offset for clarity -->
+  <line x1="14" y1="9" x2="20" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="9" x2="14" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

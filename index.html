@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar  flex">
+        <img id="mainlogo" height="52" src="mainpic.png" alt="none">
+
+        <div class="navcont ">
+
+            <div class="cont1 ">
+                <div class="homesvg">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732z" />
+                </svg>
+                </div>
+                <input class="border" type="search" placeholder="What do you want to play?">
+            </div>
+
+            <div class="cont2 flex ">
+                <div class="an flex">
+                    <a class="linktag" href="https://www.spotify.com/in-en/premium/">Premium</a>
+                    <a class="linktag" href="https://support.spotify.com/in-en/">Support</a>
+                    <a class="linktag" href="https://www.spotify.com/in-en/download/windows/">Download</a>
+                    <div class="dash ">|</div>
+                    <a class="linktag" href="https://www.spotify.com/us/download/android/">Install App</a>
+                    <button id="signup"><a href="https://www.spotify.com/in-en/signup?flow_ctx=84f8601e-2d94-4e8d-8b34-e182afc1a719%3A1754439852" target="_blank" >Sign up</a></button>
+                     <button id="login"><a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F" target="_blank" >Log in</a></button>
+                </div>
+               
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div class="container flex">
+
+        <div class="left border">
+
+            <div class="library  gray">
+                <div class="heading">
+                    <h4>Your Library</h4>
+                    <img src="cross.svg" class="gray cross" height="32px" alt="none">
+                </div>
+                <div class="songlist">
+                    <ul id="slist">
+                   <li>hello</li>
+                    </ul>
+                </div>
+
+                
+            </div>
+             <div class="lfooter">
+
+
+                    <div><a href="https://www.spotify.com/jp/legal">Legal</a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/">Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/">Privacy Policy</a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3">About Ad</a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/accessibility">Accessibility</a></div>
+                </div>
+        </div>
+
+
+        <div class="right border ">
+
+            <div class="playlist ">
+                <div class="hamburger">
+                 <img src="hamburger.svg" alt="ham" >
+                </div>
+                <h2>Trending Songs</h2>
+                <div class="cardcontainer border">
+                    <div data-folder="monica" class="card ">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div>
+
+                        <img src="https://pagalworldmusic.com/downloads/cover/4573837/4573837.jpg" alt="none">
+                        <div class="content">
+                        <h2>Monica-From "Coolie"</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+                    <div data-folder="paradesiya" class="card ">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5754cde395f5c46792186c7" alt="none">
+                        <div class="content">
+                        <h2>Paradesia-From "Param sundari"</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+
+
+                    <div data-folder="OG" class="card ">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e029ea4975d7d6af51e6605b31f"alt="none">
+                        <div class="content">
+                        <h2>Fire Strom(From "They call him OG")</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+
+
+                    <div data-folder="kub" class="card ">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div> 
+                        <img src="https://pagalworldmusic.com/downloads/cover/4573669/4573669.jpg" alt="none">
+                        <div class="content">
+                        <h2>Naa Koduka-from "Kuberaa"</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+
+
+                    <div data-folder="pushpa" class="card">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://pagalworldmusic.com/downloads/cover/4569604/4569604.jpg" alt="none">
+                        <div class="content">
+                        <h2>Kissik-"Pushpa 2"</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+
+
+                    <div data-folder="devara" class="card ">
+                        <div class="play">
+                            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circular background -->
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+
+                                <!-- Black play icon -->
+                                <polygon points="40,35 40,65 70,50" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://pagalworldmusic.com/downloads/cover/4568511/4568511.jpg" alt="none">
+                        <div class="content">
+                        <h2>Devara Part 1(Telugu)</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+                
+
+
+
+                    
+                </div>
+
+
+
+
+
+
+                  <h2>Top Artists</h2>
+                <div class="cardcontainer border Artists">
+                    <div data-folder="ani" class="card ">
+                      
+
+                        <img class="ani" src="https://i.scdn.co/image/ab676161000051740f0be2054fe9594026a6b843" alt="none">
+                        <div class="content">
+                        <h2>Anirudh Ravichander</h2>
+                        <p>Artist-Tamil,Telugu,Hindi</p>
+                        </div>
+
+
+                    </div>
+                    <div data-folder="thaman" class="card ">
+                        
+                        <img class="ani" src="https://i.scdn.co/image/ab676161000051741edc6d40afbea5426d0cfe0f" alt="none">
+                        <div class="content">
+                        <h2>Thaman S</h2>
+                        <p>Artist-Telugu,Tamil</p>
+                        </div>
+                    </div>
+
+
+                    <div data-folder="devi" class="card ">
+                        
+                        <img class="ani" src="https://i.scdn.co/image/ab67616100005174aa5350248841ba12e12467af"alt="none">
+                        <div class="content">
+                        <h2>Devi Sri Prasad</h2>
+                        <p>Artist-Telugu,Tamil</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+                  
+                
+            </div>
+
+            
+
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle"></div>
+                </div>
+                <div class="abovebar flex">
+                    <div class="songinfo color">
+                       
+                    </div>
+                    <div class="songbuttons color">
+                        <img id="prev" src="prev.svg" alt="prev" >
+                        <img id="play" src="play.svg" alt="play" >
+                        <img id="next" src="next.svg" alt="next" >
+                    </div>
+                    <div class="timevol">
+                        <div class="songtime color">
+                        
+                        </div>
+                        <div class="volume flex">
+                            <img class="vol" src="volume.svg" alt="vol" >
+                            <input  class="range" type="range" name="vol" style="accent-color: #1db954;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
