@@ -3,100 +3,55 @@ let songs;
 let currFolder;
 async function getSongs(folder)
 {
-    currFolder=folder;
-    let a=await fetch(`http://127.0.0.1:5500/Javascript/spotify/songs/${folder}/`); 
-    let response=await a.text(); 
-    
-    
+    currFolder = folder;
 
-    let div=document.createElement("div"); 
-    div.innerHTML=response; 
-    let as=div.getElementsByTagName("a"); 
-    songs=[];
+    let a = await fetch("/songs/songs.json");    
+    let data = await a.json();
+    songs = data[folder] || [];
 
-     let artist;
+    let artist;
     switch (folder) {
-        case "def":
-            artist = "-";
-            break;
+        case "def": artist = "-"; break;
         case "monica":
-            artist = "Anirudh Ravichander";
-            break;
         case "ani":
-             artist = "Anirudh Ravichander";
-             break;
-        case "devara":
-             artist = "Anirudh Ravichander";
-             break;
+        case "devara": artist = "Anirudh Ravichander"; break;
         case "kub":
-             artist = "Devi Sri Prasad";
-             break;
-        case "OG":
-             artist = "Thaman S";
-             break;
         case "pushpa":
-             artist = "Devi Sri Prasad";
-             break;
-        case "thaman":
-             artist = "Thaman S";
-             break;
-        case "devi":
-             artist = "Devi Sri Prasad";
-             break;
-        
-        default:
-            artist = "Unknown Artist";
-    }
-    for(let i=0;i<as.length;i++)
-    {
-        const l=as[i];
-        if(l.href.endsWith(".mp3")) 
-        {
-            songs.push(l.href.split(`/Javascript/spotify/songs/${folder}/`)[1]);
-        }
+        case "devi": artist = "Devi Sri Prasad"; break;
+        case "OG":
+        case "thaman": artist = "Thaman S"; break;
+        default: artist = "Unknown Artist";
     }
 
-    let sli=document.querySelector("#slist");
-    sli.innerHTML="";
-   for(const i of songs)
-    {  
-        sli.innerHTML= sli.innerHTML+`
+    let sli = document.querySelector("#slist");
+    sli.innerHTML = "";
+    for (const i of songs) {
+        sli.innerHTML += `
          <li datafile="${i}">
-                            <img class="musicimg" src="music.svg" alt="micon">
-                            <div class="info">
-                            <div id="soname">${i.replaceAll("%20","").replace(".mp3","")}</div>
-                            <div>${artist}</div>
-                            </div>
-                            <div class="playnow">
-                                <span>Play Now</span>
-                                <img src="spotifyplay.svg" width="30px" alt="play">
-                            </div>
-                        </li>
-        `;
+            <img class="musicimg" src="music.svg" alt="micon">
+            <div class="info">
+                <div id="soname">${i.replaceAll("%20", "").replace(".mp3", "")}</div>
+                <div>${artist}</div>
+            </div>
+            <div class="playnow">
+                <span>Play Now</span>
+                <img src="spotifyplay.svg" width="30px" alt="play">
+            </div>
+        </li>`;
     }
 
-   
-
-    // to select all the li tags which are created
-    Array.from(document.querySelector("#slist").getElementsByTagName("li")).forEach((e)=>{
-
-        //now to add eventListeners to all the li elements 
-        e.addEventListener('click',(element)=>{
-            //now to catch the song name of the li tag which is clicked
-            // console.log(e.document.querySelector(".info").firstElementChild.innerHTML);
-
-            //now to play the music of the selected song--> create a seperate function and call it
-            playMusic(e.getAttribute("datafile",true));
-
+    Array.from(document.querySelector("#slist").getElementsByTagName("li")).forEach((e) => {
+        e.addEventListener('click', () => {
+            playMusic(e.getAttribute("datafile"));
         });
-    })
-   
+    });
 }
+
 
 
 function playMusic(track,pause=false)
 {   
-    currentSong.src=`/Javascript/spotify/songs/${currFolder}/`+track;
+    currentSong.src=`/songs/${currFolder}/`+track;
     if(!pause){
 
         currentSong.play();
@@ -132,7 +87,7 @@ async function main()
 
      await getSongs("def");
     
-     currentSong.src=`/Javascript/spotify/songs/${currFolder}/`+songs[0];
+     currentSong.src=`/songs/${currFolder}/`+songs[0];
      playMusic(songs[0],true);
 
      const play=document.body.querySelector("#play");
