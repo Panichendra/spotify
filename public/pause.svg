@@ -1,6 +1,6 @@
 <!-- Pause Button with Circle Background -->
 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
-  <circle cx="12" cy="12" r="12" fill="#1DB954"/>
+  <circle cx="12" cy="12" r="12" fill="#ffc14fff"/>
   <rect x="9" y="8" width="2" height="8" fill="black"/>
   <rect x="13" y="8" width="2" height="8" fill="black"/>
 </svg>

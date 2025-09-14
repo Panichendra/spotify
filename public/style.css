@@ -25,10 +25,7 @@ body {
     width:100%;
 }
 
-#mainlogo {
-    padding: 10px;
-    padding-top: 8px;
-}
+
 
 .cont1 {
     position: relative;
@@ -91,7 +88,7 @@ body {
 .linktag:hover {
     color: rgb(254, 254, 254);
     text-decoration: underline;
-    font-size: 16px;
+    
     cursor: pointer;
 }
 
@@ -129,7 +126,7 @@ body {
 
 #login:hover,
 #signup:hover {
-    font-size: 14px;
+    
     background-color: rgb(222, 208, 208);
     cursor: pointer;
 }
@@ -334,9 +331,10 @@ h4 {
 }
 .content{
     padding: 10px;
-    
-    
-    
+       
+}
+.Artists{
+    height:400px;
 }
 .card>img {
     width: 100%;
@@ -455,6 +453,7 @@ h4 {
 
 .homesvg{
     cursor: pointer;
+    margin: 10px;
 }
 
 
@@ -658,12 +657,14 @@ h4 {
     .homesvg{
        width:10px;
        height:10px;
+       
        display:flex;
         align-items: center;
     }
     .homesvg>svg{
         width:13px;
         height:auto;
+        
        
     }
     .navcont {
@@ -789,13 +790,22 @@ h4 {
     }
 }
 
+
+
+
+
+/* problem starts from here */
+
+
+
+
 @media (max-width:500px) {
     .navcont {
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
     }
-    .cont1, .cont2 {
+    .cont1 {
         justify-content: center;
         flex-wrap: wrap;
         gap: 6px;
@@ -809,20 +819,25 @@ h4 {
         border-radius: 14px;
         margin: 0 4px;
     }
-    nav > img {
-        width: 28px;
-        height: 28px;
-       
-    }
+    
     .homesvg > svg {
         width: 18px;
     }
+    
+    .an{
+        /* background-color: aquamarine; */
+        display: flex;
+        justify-content: space-around;
+        width:100%;
+    }
     .linktag {
-        font-size: 10px;
-        padding: 4px 6px;
+        font-size:8px;
+        padding: 0px 0px;
+       margin:2px;
+       
     }
     #login, #signup {
-        padding: 6px 20px;
+        padding: 4px 10px;
         font-size: 8px;
     }
 
@@ -884,5 +899,30 @@ h4 {
     .range{
         width:79px;
     }
+    .Artists{
+        height:520px;
+    }
 }
 
+@media (max-width:390px)
+{
+   .an{
+        /* background-color: aquamarine; */
+        gap:1px;
+        width:100%;
+    }
+    .linktag {
+        font-size:8px;
+        padding: 0px 0px;
+       margin:2px;
+        
+    }
+    #login, #signup {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    
+    .Artists{
+        height:550px;
+    }
+} 
